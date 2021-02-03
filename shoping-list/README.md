@@ -6,19 +6,18 @@
 
 
 
-### document.querySelectorAll 에서  .map 이 안되는 이유 
+### document.querySelectorAll 에서  .map 이 안되는 이유 ###
+
+
 
 map과 filter 와 같은 것은 함수가 아니라 메서드이다. 
 array가 아니면 사용할 수 없다. array가 아닌데 array같이 여겨지는 객체 중 하나가 document.querySelectorAll이다.
-----
-
 
 ![image](https://user-images.githubusercontent.com/46587806/106703684-13b3a080-662e-11eb-984f-4d268a5c5ee0.png)
 ----
 
-이렇게 보면 array라고 생각하지만, 이 객체는 array가 아니라 .map을 지원하지 않는다.
+이렇게 보면 array라고 생각하지만, 이 객체는 array가 아니라 .map을 지원하지 않는다.그럼 우리가 아는 배열을 보면
 
-그럼 우리가 아는 배열을 보면
 ![image](https://user-images.githubusercontent.com/46587806/106703727-304fd880-662e-11eb-90a0-f212987e41af.png)
 -----
 
