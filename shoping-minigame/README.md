@@ -2,6 +2,8 @@
 
 > html , css , javascript
 
+[https://wowns9270.github.io/portfolio/shoping-minigame/]
+
 > 쇼핑몰에 셔츠 , 바지 , 치마의 종류가 있고 색상은 파랑, 노랑, 핑크의 색이 있을 때 요구사항에 맞게 리스트를 뽑아주는 프로젝트입니다.
 
 > 이미지와 json 파일은 가져와서 사용했습니다.
