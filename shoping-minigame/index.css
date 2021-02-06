@@ -1,0 +1,78 @@
+body{
+    background-color: gray;
+}
+
+.logo{
+    text-align: center;
+    margin-bottom: 20px;
+}
+img{
+    width: 50px;
+    height: 50px;
+}
+.logo img{
+    width: 100px;
+    height: 100px;
+}
+
+.nav{
+    display: flex;
+    justify-content:space-around;
+    width: 600px;
+    margin: auto;
+    height: 100px;
+    
+}
+
+ .btn1{
+    cursor: pointer;
+} 
+
+.btn2{
+    border: 0;
+    outline: 0;
+    font-size: 20px;
+    border-radius: 6px;
+    display: inline-block;
+    height: 50px;
+    cursor: pointer;
+
+
+} 
+
+.btn2.blue{
+    background-color: skyblue;
+}
+
+.btn2.yellow{
+    background-color: rgb(233, 235, 135);
+}
+
+.btn2.pink{
+    background-color: rgb(235, 135, 230);
+}
+
+.list{
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    width: 600px;
+    height: 350px;
+    text-align: center;
+    margin: auto;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    background-color: rgba(245, 245, 245, 0.815);
+    margin: 10px;
+    list-style: none;
+    padding-left: 20px;
+    border-radius: 10px;
+    width: 500px;
+}
+
+.span-font{
+    font-size: 18px;
+    padding-left: 20px;
+}
