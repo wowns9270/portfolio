@@ -37,10 +37,12 @@
 > 변수 명이나 alt와 같은 속성도 꼼꼼히 체크한다. (나는 변수명을 많이 고민하지 않는 문제)
 
 > css 색상도 변수로 설정해서 중복이나 오류가 없도록 한다.
-> ![image](https://user-images.githubusercontent.com/46587806/107137394-656e6a80-694f-11eb-898c-12d922e6b9c8.png)
+
+![image](https://user-images.githubusercontent.com/46587806/107137394-656e6a80-694f-11eb-898c-12d922e6b9c8.png)
 
 > 마우스에 커서가 올라갔을 때 포인터로 변하고 300ms 동안 크기가 1.1배로 변하도록하는 효과
-> ![image](https://user-images.githubusercontent.com/46587806/107137759-0d396780-6953-11eb-9a2e-98649cfad83b.png)
+
+![image](https://user-images.githubusercontent.com/46587806/107137759-0d396780-6953-11eb-9a2e-98649cfad83b.png)
 
 > button에 백그라운드를 투명으로 바꾸는 법
 > background-color : transparent
@@ -70,7 +72,8 @@
 function (){ displayItems(items); } 또는
 () => displayItems(items); 를 사용해서 등록해 주어야 한다.
 
-## 'click' , gogo) 라고 하고 function gogo() { ~~~ }; 가 되는 이유는 click의 콜백함수로 gogo를 등록한 것이기 때문에 가능한 것이고 매개변수를 이용하거나 하면 익명함수 , 화살표 함수를 사용해야한다.
+- 'click' , gogo) 라고 하고 function gogo() { ~~~ }; 가 되는 이유는 click의 콜백함수로 gogo를 등록한 것이기 때문에 가능한 것이고 매개변수를 이용하거나 하면 익명함수 , 화살표 함수를 사용해야한다.
+-
 
 ![image](https://user-images.githubusercontent.com/46587806/107333649-19f7c000-6af9-11eb-9740-ff39891cc5cf.png)
 
@@ -80,4 +83,7 @@ function (){ displayItems(items); } 또는
 
 > 화살표함수는 호출할 때가 아닌 상위 스코프의 this를 따른다. 여기서 상위 스코프는 setEventListen 함수이고 이함수를 호출한 것은 전역객체다?
 
-### innerHtml 로 새로 만드는 것이 아닌 item display를 이용하여 성능 업그레이드 해보기
+- innerHtml 로 새로 만드는 것이 아닌 item display를 이용하여 성능 업그레이드 해보기
+-
+
+> dom으로 접근해서 각각의 클래스 invisible을 만들어주고 foreach로 처리해서 display:none으로 계속 새로운 리스트를 만들지 않게 해주었다.
