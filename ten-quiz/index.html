@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>10-quiz</title>
+    <title>8-quiz</title>
 
     <link rel="stylesheet" href="index.css">
-    <script src="index.js" defer></script>
+    <script type="module" src="./src/index.js" defer></script>
 </head>
 <body>
     
 
     <header class="board">
 
-        <div class="number">Question <span class="quiz_number">1</span> /10</div>
+        <div class="number">Question <span class="quiz_number">1</span> /8</div>
 
-        <span class="quiz">Where in an HTML document is the correct place to refer to an external style sheet?</span>
+        <span class="quiz"></span>
 
     </header>
 
@@ -25,7 +25,6 @@
 
             <span class="qui_num">A</span>
             <span class="qui_content">
-                In the head section
             </span>
 
         </div>
@@ -33,25 +32,45 @@
 
             <span class="qui_num">B</span>
             <span class="qui_content">
-                In the 22n
             </span>
         </div>
         <div class="qui" data-key ="3">
             <span class="qui_num">C</span>
             <span class="qui_content">
-                In the 33
             </span>
 
         </div>
         <div class="qui" data-key ="4">
             <span class="qui_num">D</span>
             <span class="qui_content">
-                In the 44on
             </span>
         </div>
-    </section>
 
-    <button class="next">next</button>
+    </section>
+    
+        <button class="next">next</button>
+
+
+    <div class="start_popup">
+
+        <div class="start_popup_comment">
+            quiz
+        </div>
+        <button class="start">start</button>
+    </div>
+
+
+
+    <div class="pop_up pop_up_hide">
+        <div>
+            You have completed the quiz.
+        <div>
+        <div class="pop_score">   
+            You got: 2 out of 8 questions right.
+        </div>
+        <button class="replay">replay</button>
+    </div>
+
 
 
     <footer class="footer"></footer>

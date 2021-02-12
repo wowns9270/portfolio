@@ -17,6 +17,7 @@ body {
   height: 20%;
   font-size: 17px;
   padding: 10px;
+  border-radius: 8px;
 }
 
 .number {
@@ -43,10 +44,13 @@ body {
 }
 
 .qui {
+  display: flex;
+  align-items: center;
   width: 40%;
   background-color: #0094da;
   margin: 10px;
   transition: all 300ms ease;
+  border-radius: 8px;
 }
 
 .qui:hover {
@@ -67,5 +71,60 @@ body {
 }
 
 .next {
-  font-size: 50px;
+  font-size: 30px;
+}
+
+.pop_up {
+  position: absolute;
+  width: 700px;
+  height: 300px;
+  background-color: white;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 25px;
+
+  background-color: burlywood;
+}
+.start_popup {
+  position: absolute;
+  width: 700px;
+  height: 300px;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+
+  background-color: burlywood;
+}
+
+.pop_score,
+.start_popup_comment {
+  margin-bottom: 30px;
+}
+
+.replay:hover,
+.start:hover {
+  transform: scale(1.1);
+}
+
+.replay,
+.start {
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 30px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  transition: all 300ms ease;
+}
+
+.pop_up_hide {
+  display: none;
 }
