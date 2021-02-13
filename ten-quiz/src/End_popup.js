@@ -1,6 +1,5 @@
 'use strict'
 
-
 export default class End_popup{
 
     constructor(){
@@ -14,7 +13,7 @@ export default class End_popup{
             this.onClick && this.onClick();
             this.hide();
 
-       })
+        })
     }
 
     setClickListener(onClick){

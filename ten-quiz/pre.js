@@ -54,7 +54,7 @@ function next_clear(){
 function game_end(){
      alert(score , "score");
 }
-function quiz_start(){}
+function quiz_start(){
      game_setting();
      let cnt= 0;
 }

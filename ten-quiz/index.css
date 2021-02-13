@@ -35,7 +35,7 @@ body {
 
 .quiz_list {
   height: 40%;
-  width: 1300px;
+  width: 80%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

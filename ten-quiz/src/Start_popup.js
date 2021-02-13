@@ -1,5 +1,8 @@
 'use strict'
 
+import Game from './Quiz.js';
+import EndPopUp from './End_popup.js';
+
 export default class Start_popup {
 
     constructor(){
@@ -8,16 +11,18 @@ export default class Start_popup {
         this.start_btn = document.querySelector('.start');
 
 
-        this.start_btn.addEventListener('click', ()=>{
-
+        this.start_btn.addEventListener('click',()=>{
             this.onClick && this.onClick();
             this.hide();
+            
         })
     }
 
     setClickListener(onClick){
         this.onClick = onClick;
     }
+
+    
 
     hide(){
         this.start_popup.classList.add('pop_up_hide');
@@ -26,12 +31,5 @@ export default class Start_popup {
     show(){
         this.start_popup.classList.remove('pop_up_hide');
     }
-
-    async setting(){
-        this.datas =  await fetch('./data/data.json')
-        this.data_json = await this.datas.json();   
-        return this.data_json.items;
-    }
-
 
 }
