@@ -5,11 +5,11 @@ import {lazyLoad} from '../utill/lazyLoad.js';
 
 export default class ResultsSection {
 
-    constructor({$target , data}){
+    constructor({$target , data , onClick}){
 
-        console.log($target);
 
         this.data = data;
+        this.onClick = onClick;
 
         this.section = document.createElement('section');
         this.section.className = 'results-section';
@@ -26,9 +26,15 @@ export default class ResultsSection {
         lazyLoad();
     }
 
+    findCatById(id){
+
+        const result = this.data.find( card => card.id == id);
+
+        return result;
+
+    }
 
     render(){
-        console.log("여기야");
         if(!this.data) return;
 
         this.section.innerHTML = "";
@@ -46,7 +52,44 @@ export default class ResultsSection {
                 });
             });
 
+            cardContainer.addEventListener('click', e =>{
+
+                //console.log(e.path);
+                const path = e.path;
+                const card = path.find( comp => comp.className == 'cat-card');
+
+                if(card){
+
+                    const id = card.dataset.id;
+                    const catInfo = this.findCatById(id);
+
+                    this.onClick(catInfo);
+
+                }
+
+            })
+
+
+
+
             this.section.appendChild(cardContainer);
+        }
+        else{
+            const noticeSection = document.createElement('section');
+            noticeSection.className = 'notice-section';
+
+            const notice = document.createElement('h2');
+            notice.className = 'notice';
+            notice.innerText = '검색 결과가 없습니다.';
+
+            const noticeImage = document.createElement('img');
+            noticeImage.className = 'notice-image';
+            noticeImage.src = '../src/img/emptybox.png';
+
+            noticeSection.appendChild(notice);
+            noticeSection.appendChild(noticeImage);
+
+            this.section.appendChild(noticeSection);
         }
     }
 }
