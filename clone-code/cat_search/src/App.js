@@ -15,10 +15,12 @@ export default class App {
 
     constructor($target){
 
+        const keywords = getItem('keywords');
         const data = getItem('data');
 
         const searchingSection = new SearchingSection({
             $target,
+            keywords,
             onSearch: async keyword => {
                 loading.toggleSpinner();
 
@@ -55,6 +57,23 @@ export default class App {
             data,
             onClick : data =>{
                 detailModal.setState(data);
+            },
+            onScroll : async () =>{
+                loading.toggleSpinner();
+
+                const response  = await api.fetchRandomCats();
+
+                if(!response.isError){
+                    const beforeData = getItem('data');
+                    const nextData = beforeData.concat(response.data);
+                    
+                    setItem('data' , nextData);
+                    resultsSection.setState(nextData);
+                    loading.toggleSpinner();
+                }
+                else{
+                    error.setState(response.data);
+                }
             }
         
         });

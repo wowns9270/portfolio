@@ -1,15 +1,17 @@
 
 import Card from './Card.js';
 import {lazyLoad} from '../utill/lazyLoad.js';
+import {scrollFetch} from '../utill/scrollFetch.js';
 
 
 export default class ResultsSection {
 
-    constructor({$target , data , onClick}){
+    constructor({$target , data , onClick , onScroll}){
 
 
         this.data = data;
         this.onClick = onClick;
+        this.onScroll = onScroll;
 
         this.section = document.createElement('section');
         this.section.className = 'results-section';
@@ -18,6 +20,7 @@ export default class ResultsSection {
 
         this.render();
         lazyLoad();
+        scrollFetch(this.onScroll);
     }
 
     setState(data){
