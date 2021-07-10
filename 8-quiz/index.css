@@ -75,6 +75,7 @@ body {
 }
 
 .pop_up {
+  border-radius: 10px;
   position: absolute;
   width: 700px;
   height: 300px;
@@ -89,6 +90,7 @@ body {
   background-color: burlywood;
 }
 .start_popup {
+  border-radius: 10px;
   position: absolute;
   width: 700px;
   height: 300px;
@@ -106,6 +108,12 @@ body {
 .pop_score,
 .start_popup_comment {
   margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.start_popup_message{
+  padding: 20px;
+  font-size: 30px;
 }
 
 .replay:hover,
